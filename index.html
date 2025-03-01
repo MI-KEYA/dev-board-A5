@@ -19,6 +19,17 @@
         .font-poppins {
             font-family: poppins;
         }
+
+        .activityStyle {
+            background-color: #F4F7FF;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 15px;
+        }
+
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
 
@@ -35,7 +46,7 @@
                         <img src="./assets/checkbox.png" alt="">
                         <p id="nav-task-number" class="font-bold text-xl">23</p>
                     </div>
-                    <img src="./assets/theme-btn.png" alt="">
+                    <img id="theme-img" src="./assets/theme-btn.png" alt="">
                 </div>
             </div>
         </nav>
@@ -50,14 +61,16 @@
                     </div>
                     <div class="flex flex-col items-center">
                         <h1>Task Assigned</h1>
-                        <p id="task-number" class="font-bold text-xl">05</p>
+                        <p id="task-number" class="font-bold text-xl">6</p>
                     </div>
                 </div>
                 <div class="col-span-2">
-                    <div class="flex items-center bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8]
+                    <div id="discovery"  class="flex items-center bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8]
                     rounded-lg text-white font-bold gap-10 justify-center py-5">
-                        <img src="./assets/board.png" alt="">
-                        <h2 class="text-center">Discover Something<br> New Today!</h2>
+                       
+                            <img src="./assets/board.png" alt="">
+                            <h2 class="text-center">Discover Something<br> New Today!</h2>
+                        
                     </div>
                 </div>
                 <div class="flex items-center gap-3 bg-[#F4F7FF]  px-5 py-5 rounded-lg">
@@ -195,10 +208,12 @@
                     <img src="./assets/activity.png" alt="">
                     <h2 class="">Activity Log</h2>
                 </div>
-                <button class="btn btn-primary border-none rounded-lg bg-[#3752FD]">Clear History</button>
+                <button id="" class="btn btn-primary border-none rounded-lg bg-[#3752FD]">Clear History</button>
 
             </div>
             <hr class="border-t-2 border-dashed border-gray-300 mt-5">
+
+            <p id="activity-log" class="activityStyle hidden"></p>
 
         </section>
     </main>
@@ -211,9 +226,11 @@
         setInterval(updateTime, 1000);
         updateTime();
 
-       
+
     </script>
     <script src="./script.js/task.js"></script>
+    <script src="./script.js/discovey.js"></script>
+    <script src="./script.js/theme.js"></script>
 
 </body>
 
