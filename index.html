@@ -33,7 +33,7 @@
                 <div class="flex items-center gap-10">
                     <div class="bg-[#F4F7FF] px-5 py-2 flex items-center gap-3 rounded-3xl">
                         <img src="./assets/checkbox.png" alt="">
-                        <p class="font-bold text-xl">23</p>
+                        <p id="nav-task-number" class="font-bold text-xl">23</p>
                     </div>
                     <img src="./assets/theme-btn.png" alt="">
                 </div>
@@ -48,7 +48,10 @@
                     <div class="bg-white p-3 rounded-full">
                         <img src="/assets/checkbox.png" alt="">
                     </div>
-                    <h1>Task Assigned</h1>
+                    <div class="flex flex-col items-center">
+                        <h1>Task Assigned</h1>
+                        <p id="task-number" class="font-bold text-xl">05</p>
+                    </div>
                 </div>
                 <div class="col-span-2">
                     <div class="flex items-center bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8]
@@ -61,7 +64,7 @@
                     <div class="bg-white p-3 rounded-full">
                         <img src="/assets/calender.png" alt="">
                     </div>
-                    <h1>Time</h1>
+                    <p id="time" class=""></p>
                 </div>
             </div>
             <hr class="border-t-2 border-dashed border-gray-300 mb-5">
@@ -81,7 +84,8 @@
                                 <p class="text-gray-600">Deadline</p>
                                 <h3 class="text-gray-800">21 March 2025</h3>
                             </div>
-                            <button class="btn btn-primary border-none rounded-lg bg-[#3752FD]">Completed</button>
+                            <button
+                                class="task-btn btn btn-primary border-none rounded-lg bg-[#3752FD]">Completed</button>
                         </div>
                     </div>
                 </div>
@@ -99,7 +103,8 @@
                                 <p class="text-gray-600">Deadline</p>
                                 <h3 class="text-gray-800">21 March 2025</h3>
                             </div>
-                            <button class="btn btn-primary border-none rounded-lg bg-[#3752FD]">Completed</button>
+                            <button
+                                class="task-btn btn btn-primary border-none rounded-lg bg-[#3752FD]">Completed</button>
                         </div>
                     </div>
                 </div>
@@ -117,14 +122,15 @@
                                 <p class="text-gray-600">Deadline</p>
                                 <h3 class="text-gray-800">21 March 2025</h3>
                             </div>
-                            <button class="btn btn-primary border-none rounded-lg bg-[#3752FD]">Completed</button>
+                            <button
+                                class="task-btn btn btn-primary border-none rounded-lg bg-[#3752FD]">Completed</button>
                         </div>
                     </div>
                 </div>
                 <div class="card  w-80 shadow-sm bg-[#F4F7FF]">
                     <div class="card-body">
                         <p class="bg-base-100 w-22 p-2 rounded-lg text-gray-800">Meta</p>
-                        <h2 class="card-title  mb-5">Add new emoji </h2>
+                        <h2 class="card-title  mb-5">Add new emoji 😂</h2>
                         <p class="bg-base-100 mb-5 rounded-lg p-2 text-gray-600 h-13  overflow-hidden">Debug using
                             Chrome
                             DevTools, check for overlapping elements, and ensure onClick works properly
@@ -135,7 +141,8 @@
                                 <p class="text-gray-600">Deadline</p>
                                 <h3 class="text-gray-800">21 March 2025</h3>
                             </div>
-                            <button class="btn btn-primary border-none rounded-lg bg-[#3752FD]">Completed</button>
+                            <button
+                                class="task-btn btn btn-primary border-none rounded-lg bg-[#3752FD]">Completed</button>
                         </div>
                     </div>
                 </div>
@@ -153,7 +160,8 @@
                                 <p class="text-gray-600">Deadline</p>
                                 <h3 class="text-gray-800">21 March 2025</h3>
                             </div>
-                            <button class="btn btn-primary border-none rounded-lg bg-[#3752FD]">Completed</button>
+                            <button
+                                class="task-btn btn btn-primary border-none rounded-lg bg-[#3752FD]">Completed</button>
                         </div>
                     </div>
                 </div>
@@ -171,7 +179,8 @@
                                 <p class="text-gray-600">Deadline</p>
                                 <h3 class="text-gray-800">21 March 2025</h3>
                             </div>
-                            <button class="btn btn-primary border-none rounded-lg bg-[#3752FD]">Completed</button>
+                            <button
+                                class="task-btn btn btn-primary border-none rounded-lg bg-[#3752FD]">Completed</button>
                         </div>
                     </div>
                 </div>
@@ -184,15 +193,27 @@
             <div class="flex flex-col justify-center items-center pt-5">
                 <div class="flex items-center gap-3 justify-center mb-5">
                     <img src="./assets/activity.png" alt="">
-                    <h2 class="">Activity Log</h2>  
+                    <h2 class="">Activity Log</h2>
                 </div>
                 <button class="btn btn-primary border-none rounded-lg bg-[#3752FD]">Clear History</button>
-                
+
             </div>
             <hr class="border-t-2 border-dashed border-gray-300 mt-5">
-           
+
         </section>
     </main>
+
+    <script>
+        function updateTime() {
+            const options = { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' };
+            document.getElementById("time").textContent = new Date().toLocaleDateString('en-US', options);
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+
+       
+    </script>
+    <script src="./script.js/task.js"></script>
 
 </body>
 
