@@ -11,7 +11,7 @@ for (let i = 0; i < taskButton.length; i++) {
             const convertedTask = parseInt(taskNumber);
             const newTask = convertedTask - 1;
             document.getElementById('task-number').innerText = newTask;
-            alert("Board Updated Successfully.");
+            alert("Task completed Successfully.");
             if (newTask === 0) {
                 alert("Congrates!! You have completed all the current task");
             }
