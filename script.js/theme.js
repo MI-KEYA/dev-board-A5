@@ -7,6 +7,7 @@ document.querySelector('#theme-img').addEventListener('click', function() {
   if (currentColor >= colors.length) currentColor = 0;
 });
 
+
 document.getElementById("clear-btn").addEventListener('click',
   function() {
     document.getElementById('activity-log').style.display = 'none';
