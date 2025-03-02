@@ -19,13 +19,15 @@ for (let i = 0; i < taskButton.length; i++) {
             
             const cardTitle = document.querySelectorAll(".task-card-title");
             card = cardTitle[i].innerText;
+            const now = new Date();
+        const timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
             const container = document.getElementById('activity-log');
             const div = document.createElement("div");
             div.classList.add("activityStyle");
             div.innerHTML = 
-              `<h1 class = "text-gray-600">You have completed the task  </h1>
-              <h1 class = "text-gray-600">${card} at</h1>
-              <p class = "text-gray-600 clock"></p>`;
+              `<h1 class = "text-gray-600">You have completed the task ${card} at</h1>
+              
+              <p class = "text-gray-600" >${timeString}</p>`;
             container.appendChild(div);
 
             
