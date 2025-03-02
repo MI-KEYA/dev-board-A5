@@ -12,26 +12,26 @@ for (let i = 0; i < taskButton.length; i++) {
             const newTask = convertedTask - 1;
             document.getElementById('task-number').innerText = newTask;
             alert("Board Updated Successfully.");
-            if(newTask === 0){
+            if (newTask === 0) {
                 alert("Congrates!! You have completed all the current task");
             }
-            
-            
+
+
             const cardTitle = document.querySelectorAll(".task-card-title");
             card = cardTitle[i].innerText;
             const now = new Date();
-        const timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+            const timeString = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
             const container = document.getElementById('activity-log');
             const div = document.createElement("div");
             div.classList.add("activityStyle");
-            div.innerHTML = 
-              `<h1 class = "text-gray-600">You have completed the task ${card} at</h1>
+            div.innerHTML =
+                `<h1 class = "text-gray-600">You have completed the task ${card} at</h1>
               
               <p class = "text-gray-600" >${timeString}</p>`;
             container.appendChild(div);
 
-            
-            
+
+
 
             document.getElementById('activity-log').style.display = 'block';
 
